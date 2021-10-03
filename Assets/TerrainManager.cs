@@ -11,7 +11,20 @@ public class TerrainManager : MonoBehaviour
     public PieceInformation[] Pieces;
     public Transform PieceHolder;
     public Dictionary<Vector2, Piece> Board=new Dictionary<Vector2, Piece>();
+    public InputManager.Turn turn = InputManager.Turn.White;
+    public bool asStarted=false;
 
+    public InputManager.Turn GetTurn()
+    {
+        return turn;
+    }
+    public void ChangeTurn()
+    {
+        if (turn == InputManager.Turn.White)
+            turn = InputManager.Turn.Black;
+        else
+            turn = InputManager.Turn.White;
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -29,24 +42,30 @@ public class TerrainManager : MonoBehaviour
                 }
             }
         }
-        foreach (PieceInformation piece in Pieces)
+
+        
+    }
+    public void CreatePieces(GameObject g,bool isWhite)
+    {
+        int i = 0;
+        int j = 6;
+        if (!isWhite)
         {
+            i += 6;
+            j += 6;
+        }
+        for (;i<j;i++)
+        {
+            PieceInformation piece = Pieces[i];
             foreach (Vector2 pos in piece.list)
             {
-                GameObject g = Instantiate<GameObject>(piece.prefab, pos, Quaternion.FromToRotation(new Vector3(0, 0, 1), new Vector3(0, 1, 0)), PieceHolder);
-                g.transform.localPosition = pos;
-                Board.Add(pos, g.GetComponent<Piece>());
-
+                GameObject ga = Instantiate<GameObject>(piece.prefab, pos, Quaternion.FromToRotation(new Vector3(0, 0, 1), new Vector3(0, 1, 0)), g.transform);
+                ga.transform.localPosition = pos;
+                Board.Add(pos, ga.GetComponent<Piece>());
             }
         }
-        
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     public Piece GetPieceAt(Vector2 pos)
     {
         if (Board.ContainsKey(pos))
@@ -67,6 +86,7 @@ public class TerrainManager : MonoBehaviour
         }
         Board.Add(pos, piece);
         print(Board);
+        ChangeTurn();
 
     }
 }

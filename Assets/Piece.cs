@@ -24,7 +24,6 @@ public abstract class Piece : MonoBehaviour
                 grid.Moove(this, GridPos);
                 this.gameObject.transform.localPosition = GridPos;
 
-
                 return true;
             }
         }
