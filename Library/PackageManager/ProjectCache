@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637650603786974230
-    m_Hash: 2204306383
+      ticks: 637696282202735443
+    m_Hash: 686281437
   m_LockFileStatus:
     m_FilePath: C:/Users/Theo/Desktop/unity start/Chess/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637650603966193204
-    m_Hash: 3394294237
+      ticks: 637696282202745437
+    m_Hash: 3979380318
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_PackageAssets:
@@ -106,6 +106,7 @@ m_PackageAssets:
         - 6.0.5
         - 7.0.0-pre.2
         - 7.0.0-pre.3
+        - 7.0.0
         compatible:
         - 5.0.4
         - 5.0.5
@@ -302,6 +303,7 @@ m_PackageAssets:
         - 6.0.0-pre.2
         - 6.0.0-pre.3
         - 6.0.0-pre.4
+        - 6.0.0
         compatible:
         - 4.0.2
         verified: 4.0.2
@@ -486,6 +488,7 @@ m_PackageAssets:
         - 6.0.1
         - 7.0.0-pre.2
         - 7.0.0-pre.3
+        - 7.0.0
         compatible:
         - 5.1.1
         - 5.1.2
@@ -931,6 +934,7 @@ m_PackageAssets:
         - 1.2.1
         - 1.2.2
         - 1.2.3
+        - 1.2.4
         compatible:
         - 1.0.2
         - 1.0.3
@@ -943,7 +947,8 @@ m_PackageAssets:
         - 1.2.1
         - 1.2.2
         - 1.2.3
-        verified: 1.2.3
+        - 1.2.4
+        verified: 1.2.4
       dependencies: []
       resolvedDependencies: []
       keywords: []
@@ -1017,11 +1022,13 @@ m_PackageAssets:
         - 1.1.24
         - 1.1.26
         - 1.1.27
+        - 1.1.29
         compatible:
         - 1.1.24
         - 1.1.26
         - 1.1.27
-        verified: 1.1.27
+        - 1.1.29
+        verified: 1.1.29
       dependencies:
       - name: com.unity.ext.nunit
         version: 1.0.6

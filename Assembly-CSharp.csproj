@@ -62,11 +62,11 @@
     <Compile Include="Assets\DrawMoove.cs" />
     <Compile Include="Assets\Knight.cs" />
     <Compile Include="Assets\King.cs" />
+    <Compile Include="Assets\CameraManager.cs" />
     <Compile Include="Assets\Pawn.cs" />
     <Compile Include="Assets\Bishop.cs" />
     <Compile Include="Assets\TerrainManager.cs" />
     <Compile Include="Assets\InputManager.cs" />
-    <Compile Include="Assets\CameraManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
